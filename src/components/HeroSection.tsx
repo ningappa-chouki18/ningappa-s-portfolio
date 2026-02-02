@@ -83,7 +83,7 @@ const HeroSection = () => {
                   <img
                     src={profilePhoto}
                     alt="Ningappa Chouki"
-                    className="h-full w-full rounded-full object-cover"
+                    className="h-full w-full rounded-full object-cover object-top"
                   />
                 </div>
               </div>
