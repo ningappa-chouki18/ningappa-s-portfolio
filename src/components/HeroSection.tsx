@@ -88,13 +88,6 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              {/* Floating badges */}
-              <div className="absolute -right-2 top-8 animate-bounce rounded-lg bg-card px-3 py-2 shadow-card">
-                <span className="text-sm font-medium">🎓 BCA Student</span>
-              </div>
-              <div className="absolute -left-4 bottom-12 animate-bounce rounded-lg bg-card px-3 py-2 shadow-card" style={{ animationDelay: "0.5s" }}>
-                <span className="text-sm font-medium">💻 Developer</span>
-              </div>
             </div>
           </div>
         </div>
