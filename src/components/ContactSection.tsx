@@ -1,12 +1,20 @@
 import { Mail, Phone, MapPin, Linkedin, Github, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const GMAIL_COMPOSE_BASE = "https://mail.google.com/mail/?view=cm&fs=1";
+const toGmailComposeLink = (to: string, subject?: string, body?: string) => {
+  const params = new URLSearchParams({ to });
+  if (subject) params.set("su", subject);
+  if (body) params.set("body", body);
+  return `${GMAIL_COMPOSE_BASE}&${params.toString()}`;
+};
+
 const contactInfo = [
   {
     icon: Mail,
     label: "Email",
     value: "ningappachouki21@gmail.com",
-    href: "mailto:ningappachouki21@gmail.com",
+    href: toGmailComposeLink("ningappachouki21@gmail.com"),
   },
   {
     icon: Phone,
@@ -66,6 +74,8 @@ const ContactSection = () => {
                       {href ? (
                         <a
                           href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="font-medium transition-colors hover:text-primary"
                         >
                           {value}
@@ -117,7 +127,15 @@ const ContactSection = () => {
                   className="mt-6"
                   asChild
                 >
-                  <a href="mailto:ningappachouki21@gmail.com">
+                  <a
+                    href={toGmailComposeLink(
+                      "ningappachouki21@gmail.com",
+                      "Hi Ningappa",
+                      "Hello Ningappa,\n\n"
+                    )}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Mail className="mr-2 h-5 w-5" />
                     Send Email
                   </a>
