@@ -16,7 +16,7 @@ const projects = [
     ],
     icon: Car,
     demoLink: null,
-    githubLink: "https://github.com/ningappa-chouki18/python",
+    githubLink: "https://github.com/ningappa-chouki18?tab=repositories",
   },
   {
     title: "Plant Disease Detection & Startup Funding Analysis",
@@ -32,7 +32,7 @@ const projects = [
     ],
     icon: Leaf,
     demoLink: null,
-    githubLink: "https://github.com/ningappa-chouki18/python",
+    githubLink: "https://github.com/ningappa-chouki18?tab=repositories",
   },
 ];
 
