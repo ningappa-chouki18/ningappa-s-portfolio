@@ -50,10 +50,13 @@ const ProjectsSection = () => {
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2">
-          {projects.map((project) => (
-            <div
+        {projects.map((project) => (
+            <a
               key={project.title}
-              className="card-hover group overflow-hidden rounded-2xl bg-card shadow-card"
+              href={project.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-hover group block cursor-pointer overflow-hidden rounded-2xl bg-card shadow-card transition-transform hover:scale-[1.02]"
             >
               {/* Project Header */}
               <div className="relative overflow-hidden p-6 pb-4">
@@ -102,38 +105,12 @@ const ProjectsSection = () => {
                 </ul>
               </div>
 
-              {/* Actions */}
-              <div className="flex gap-3 border-t border-border p-6">
-                {project.githubLink && (
-                  <Button variant="outline" size="sm" asChild>
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="mr-2 h-4 w-4" />
-                      View Code
-                    </a>
-                  </Button>
-                )}
-                {project.demoLink ? (
-                  <Button variant="default" size="sm" asChild>
-                    <a
-                      href={project.demoLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </a>
-                  </Button>
-                ) : (
-                  <span className="flex items-center text-sm text-muted-foreground">
-                    Demo not available
-                  </span>
-                )}
+              {/* Footer with GitHub indicator */}
+              <div className="flex items-center gap-2 border-t border-border p-6 text-sm text-muted-foreground">
+                <Github className="h-4 w-4" />
+                <span>Click to view code on GitHub</span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
