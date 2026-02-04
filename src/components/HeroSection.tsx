@@ -52,7 +52,7 @@ const HeroSection = () => {
                 asChild
               >
                 <a
-                  href="https://drive.google.com/file/d/YOUR_RESUME_ID/view"
+                  href="https://drive.google.com/file/d/1q5tWgAk8768jCSpHCq7FBdWNjZOdC3_w/view?usp=drivesdk"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
