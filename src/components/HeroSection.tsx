@@ -13,12 +13,12 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-16 md:pt-20"
+      className="relative flex min-h-screen items-center overflow-hidden pt-16 md:pt-20 bg-black"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute right-0 top-0 h-[600px] w-[600px] translate-x-1/2 translate-y-[-20%] rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-[400px] w-[400px] translate-x-[-30%] translate-y-[20%] rounded-full bg-accent/5 blur-3xl" />
+        <div className="absolute right-0 top-0 h-[600px] w-[600px] translate-x-1/2 translate-y-[-20%] rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-[400px] w-[400px] translate-x-[-30%] translate-y-[20%] rounded-full bg-accent/10 blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4">
@@ -26,21 +26,21 @@ const HeroSection = () => {
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
             <div className="animate-fade-up opacity-0">
-              <span className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+              <span className="inline-block rounded-full bg-primary/20 px-4 py-1.5 text-sm font-medium text-primary">
                 Open to Opportunities
               </span>
             </div>
 
-            <h1 className="animate-fade-up opacity-0 delay-100 mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+            <h1 className="animate-fade-up opacity-0 delay-100 mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl text-white">
               Hi, I'm{" "}
               <span className="gradient-text">Ningappa Chouki</span>
             </h1>
 
-            <p className="animate-fade-up opacity-0 delay-200 mt-4 text-lg font-medium text-muted-foreground md:text-xl">
+            <p className="animate-fade-up opacity-0 delay-200 mt-4 text-lg font-medium text-gray-300 md:text-xl">
               Final-Year BCA Student | Web Developer Fresher | AI & Data Analyst Aspirant
             </p>
 
-            <p className="animate-fade-up opacity-0 delay-300 mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            <p className="animate-fade-up opacity-0 delay-300 mt-6 max-w-2xl text-base leading-relaxed text-gray-400 md:text-lg">
               Passionate about building intelligent web and AI solutions to solve real-world problems.
               Eager to contribute technical skills to innovative IT projects and grow as a professional developer.
             </p>
@@ -61,9 +61,10 @@ const HeroSection = () => {
                 </a>
               </Button>
               <Button
-                variant="heroOutline"
+                variant="outline"
                 size="lg"
                 onClick={handleContactClick}
+                className="border-white/30 text-white hover:bg-white/10 hover:text-white"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Contact Me
